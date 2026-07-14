@@ -1,6 +1,6 @@
-#CLINIC SLOT BOOKING AGENT
+CLINIC SLOT BOOKING AGENT
 
-#run code in terminal
+run code in terminal
 
 copy env from .env.example
 
@@ -10,6 +10,6 @@ uv init
 uv add -r requirements.txt
 
 
-#fastapi ccommand
+fastapi ccommand
 
 uvicorn main:app --reload --port 8000
