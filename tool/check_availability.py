@@ -19,19 +19,10 @@ def check_availability(date: str):
   
     url = "https://api.cal.com/v2/slots"
 
-    try:
-        clean_date = dateutil.parser.parse(date).strftime("%Y-%m-%d")
-    except Exception:
-        clean_date = date
-
-    start_time = f"{clean_date}T00:00:00.000Z"
-    end_time = f"{clean_date}T23:59:59.000Z"
-
     params = {
         "eventTypeId": str(CALCOM_EVENT),
         "timeZone": "Asia/Kolkata",
-        "start": start_time,
-        "end": end_time,
+        "start": date,
     }
 
     headers = {
